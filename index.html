@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>SW Test</title>
+	<link rel="stylesheet" href="styles/main.css"><link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+
+<h1>SW Test</h1>
+
+<p>This is a small project I made with the following goals:</p>
+
+<ol>
+	<li>Have a subdomain that when you visit it, it automatically redirects you to a different place on the domain</li>
+	<li>Have a service worker on that subdomain that caches a JavaScript file that is needed for the page to be redirected to</li>
+	<li>See if the service worker can cache that JavaScript file upon going to the redirect page so that it can be served from cache on the page to be redirected to</li>
+</ol>
+
+
+<hr>
+
+<small id="hakan">Created by Hakan on <em>2019-21-08</em></small>
+
+<hr>
+
+<h2><a href="/redirect/index.html">Go to the redirect page</a></h2>
+
+<!--<img src="https://images.unsplash.com/photo-1558980394-dbb977039a2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="">-->
+
+<script type="text/javascript" src="scripts/dayjs.min.js"></script>
+
+<script type="text/javascript" src="/scripts/loader.js"></script>
+
+</body>
+</html>

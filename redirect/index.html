@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>SW Test - Redirect</title>
+	<link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+
+<h1>SW Test - Redirect</h1>
+
+<h2>Welcome; you will be redirected to the main page in 5 seconds!</h2>
+
+<h3 id="redirectCountdown">Time left until redirect</h3>
+
+<!--Load redirect script-->
+<script type="text/javascript" src="/scripts/redirector.js"></script>
+
+<!--Load service worker!-->
+<script type="text/javascript">
+	if ('serviceWorker' in navigator) {
+		window.addEventListener('load', function () {
+			navigator.serviceWorker.register('/scripts/service-worker/sw.js', { scope: '/' }).then(function (registration) {
+				// Registration was successful
+				console.log('ServiceWorker registration successful with scope: ', registration.scope);
+			}, function (err) {
+				// registration failed :(
+				console.log('ServiceWorker registration failed: ', err);
+			});
+		});
+	}
+</script>
+</body>
+</html>

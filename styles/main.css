@@ -1,0 +1,18 @@
+html {
+	background: black;
+	color: white;
+}
+
+body {
+	max-width: 50rem;
+	margin: auto;
+	padding: 2rem;
+}
+
+a {
+	color: aqua;
+}
+
+a:hover {
+	color: gold;
+}
